@@ -14,7 +14,12 @@ export default function Clients() {
         <ul>
           {
             cliets.map((x)=>(<li key={x.id}>
-              <Link href={'/clients/'+x.id}> {x.name} </Link>
+              <Link href={{
+                pathname : '/clients/[id]',
+                query:{
+                  id:x.id
+                }
+              }}> {x.name} </Link>
             </li>))
           }
         
