@@ -48,7 +48,7 @@ export default function EventSearch() {
         </div>
       </div>
 
-      <button className={classes1.btn}>Find events</button>
+      <button className='btn'>Find events</button>
     </form>
   );
 }

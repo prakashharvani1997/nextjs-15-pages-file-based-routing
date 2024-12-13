@@ -41,7 +41,7 @@ export default function EventItem({ item }) {
         </div>
 
         <div className={classes.actions}>
-          <Link href={`/events/${id}`} className={classes.btn}>
+          <Link href={`/events/${id}`} className='btn'>
          <span> Explore Event</span>
           <span className={classes.icon}> <ArrowRightIcon /> </span>
          </Link>
