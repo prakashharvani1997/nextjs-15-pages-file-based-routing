@@ -1,23 +1,34 @@
 import EventSearch from "@/components/events/event-search";
 import EventList from "@/components/events/evet-list";
-import { getFeaturedEvents } from "@/dummy-data";
+import { getAllEvents, getFeaturedEvents } from "@/helpers/api-util";
 
  
-export default function AllEventsPage() {
+export default function AllEventsPage(props) {
 
+  console.log('-------props',props)
 
-   
-    const events =  getFeaturedEvents();
-   
+     
      return (
        <div>
          <h1>Home page</h1>
 
         <EventSearch />
-         <EventList items={events}/>
+         <EventList items={props.events}/>
        </div>
           
      );
 
+  }
+  
+
+  export async function getStaticProps() {
+    const events = await getAllEvents();
+  
+    return {
+      props: {
+        events: events,
+      },
+      revalidate: 60
+    };
   }
   

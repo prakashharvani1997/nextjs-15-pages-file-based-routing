@@ -22,7 +22,7 @@ export default function EventSearch() {
     <form className={classes.form} onSubmit={submitHandler}>
       <div className={classes.controls}>
         <div className={classes.control}>
-          <label htmlfor="year">Year</label>
+          <label htmlFor="year">Year</label>
           <select id="year" ref={yearInputRef}>
             <option value="2021">2021</option>
             <option value="2022">2022</option>
@@ -30,7 +30,7 @@ export default function EventSearch() {
         </div>
 
         <div className={classes.control}>
-          <label htmlfor="month">Month</label>
+          <label htmlFor="month">Month</label>
           <select id="month" ref={monthInputRef}>
             <option value="1">january</option>
             <option value="2">feb</option>

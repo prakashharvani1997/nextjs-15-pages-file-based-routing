@@ -21,16 +21,16 @@ export default function EventItem({ item }) {
       <img src={"/" + image} alt={title} />
       <div className={classes.content}>
         <div className={classes.summary}>
-          <h2>Title</h2>
+          <h2>{title}</h2>
           <div>
+           <div style={{display:'flex'}}>
             <span className={classes.icon}>
             <DateIcon  />
             </span>
-            <span>
             <time className={classes.date}>
               {humanReadDate}{" "}
             </time>
-            </span>
+           </div>
           </div>
           <div className={classes.address}>
             <AddressIcon />
