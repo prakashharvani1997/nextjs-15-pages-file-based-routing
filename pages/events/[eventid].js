@@ -56,5 +56,8 @@ export async function getStaticPaths() {
   return {
     paths: paths,
     fallback: 'blocking'
+    // true  // for load dynamicly if not exist in prerendered / pre build 
+    // false // for load stricts from pre builded 
+    //  'blocking'// for not show anything untill load dynamically fully
   };
 }

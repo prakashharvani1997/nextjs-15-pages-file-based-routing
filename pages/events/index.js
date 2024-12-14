@@ -5,9 +5,6 @@ import { getAllEvents, getFeaturedEvents } from "@/helpers/api-util";
  
 export default function AllEventsPage(props) {
 
-  console.log('-------props',props)
-
-     
      return (
        <div>
          <h1>Home page</h1>

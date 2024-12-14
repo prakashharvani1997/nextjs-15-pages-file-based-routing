@@ -1,11 +1,11 @@
 import EventList from "@/components/events/evet-list";
 import { getFeaturedEvents } from "@/dummy-data";
+import { getAllEvents } from "@/helpers/api-util";
 import Link from "next/link";
 
  
-export default function Home() {
+export default function Home({events}) {
 
- const events =  getFeaturedEvents();
 
   return (
     <div>
@@ -16,3 +16,16 @@ export default function Home() {
        
   );
 }
+
+
+  export async function getStaticProps() {
+    const events = await getAllEvents();
+  
+    return {
+      props: {
+        events: events,
+      },
+      revalidate: 60
+    };
+  }
+  
